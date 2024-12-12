@@ -9,19 +9,19 @@ export const HeroSection = () => {
         <div className='flex flex-col items-center justify-center gap-10 mt-16'>
 
             <div className='flex flex-col items-center justify-center gap-3'>
-            <p className='flex text-center items-center justify-center text-6xl font-black'>TOTAL DOMINION <br/> INTERNATIONAL CHURCH</p>
-            <p className='mt-2 text-xl font-medium'>Affecting Lives to Affect Our Generation</p>
+            <p className='flex text-center items-center justify-center text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black'>TOTAL DOMINION <br/> INTERNATIONAL CHURCH</p>
+            <p className='mt-2 text-base lg:text-lg xl:text-xl font-medium'>Affecting Lives to Affect Our Generation</p>
             </div>
 
-            <div className='flex items-center justify-center gap-8'>
-                <div className='bg-[#D7B56D] w-80 h-[1px]'></div>
-                <div><Image src='/TDI-removebg-preview.png' width={1000} height={1000} className='w-20'/></div>
-                <div className='bg-[#D7B56D] w-80 h-[1px]'></div>
+            <div className='flex items-center justify-center gap-5 md:gap-8'>
+                <div className='bg-[#D7B56D] w-28 md:w-52 lg:w-72 xl:w-80 h-[1px]'></div>
+                <div><Image src='/TDI-removebg-preview.png' width={1000} height={1000} className='w-12 md:w-16 xl:w-20'/></div>
+                <div className='bg-[#D7B56D] w-28 md:w-52 lg:w-72 xl:w-80 h-[1px]'></div>
             </div>
             
             <div className='flex flex-col items-center justify-center gap-3'>
-            <p className='text-xl italic max-w-[55rem] text-center'>"Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity."</p>
-            <p className='text-xl'>1 TIMOTHY 4: 12</p>
+            <p className='text-xs md:text-lg xl:text-xl italic max-w-72 md:max-w-[35rem] lg:max-w-[45rem] xl:max-w-[55rem] text-center'>"Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity."</p>
+            <p className='text-xs md:text-lg xl:text-xl'>1 TIMOTHY 4: 12</p>
             </div>
         </div>
     </div>

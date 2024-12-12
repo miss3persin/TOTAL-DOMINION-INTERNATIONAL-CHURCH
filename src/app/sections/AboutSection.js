@@ -22,14 +22,10 @@ export const AboutSection = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-center gap-10 relative p-20'>
+      <div className='flex md:flex-row flex-col items-center justify-center gap-10 relative px-5 py-20 md:p-20'>
 
-        {/* <div className='h-96 w-full border-2 border-[#D7B56D] flex items-center justify-center'>
-        <Image src='/TDI-removebg-preview.png' width={1000} height={1000} className='w-44'/>
-        </div> */}
-
-<div className="h-96 w-full border-2 border-[#D7B56D] flex items-center justify-center">
-      <div className="relative h-72 w-72 overflow-hidden">
+<div className="h-72 md:h-96 w-full md:w-4/6 xl:w-3/6 border-2 border-[#D7B56D] flex items-center justify-center p-8">
+      <div className="relative h-full w-full overflow-hidden">
       <div
           className="flex transition-transform duration-1000 ease-in-out h-full w-full"
           style={{
@@ -50,9 +46,9 @@ export const AboutSection = () => {
       </div>
     </div>
 
-        <div className='flex flex-col gap-10'>
-          <p className='font-medium text-xl'>Affecting Lives to Affect Our Generation</p>
-          <p className=''>At Total Dominion International Church, we are driven by a profound mission to spread the love of Christ and empower individuals to live victoriously. Our vision is to build a global community united in faith, compassion, and purpose. Discover how our rich history shapes our commitment to serving God and transforming lives.</p>
+        <div className='flex flex-col gap-6 md:gap-10 w-full items-center justify-center md:items-start md:justify-start'>
+          <p className='font-medium text-center md:text-left text-lg lg:text-xl'>Affecting Lives to Affect Our Generation</p>
+          <p className='text-sm text-center md:text-left lg:text-base'>At Total Dominion International Church, we are driven by a profound mission to spread the love of Christ and empower individuals to live victoriously. Our vision is to build a global community united in faith, compassion, and purpose. Discover how our rich history shapes our commitment to serving God and transforming lives.</p>
           <div className=''><button className='bg-[#D7B56D] bg-opacity-75 py-2 px-3 text-white font-bold text-xs rounded-sm flex items-center justify-center'>LEARN MORE <span><Image src='/right-arrow.svg' width={1000} height={1000} className='w-2 ml-3'/></span></button></div>
         </div>
       </div>
