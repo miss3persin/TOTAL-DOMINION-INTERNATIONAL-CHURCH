@@ -3,7 +3,7 @@ import React from 'react'
 
 export const LocationSection = () => {
   return (
-    <div className='relative -z-20 bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center gap-5 px-10 pt-20 md:pt-48 lg:pt-56 pb-10 md:pb-5'
+    <div className='relative z-10 bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center gap-5 px-10 pt-20 md:pt-48 lg:pt-56 pb-10 md:pb-5'
     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1625035410502-b5b4bc69c9c1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
 

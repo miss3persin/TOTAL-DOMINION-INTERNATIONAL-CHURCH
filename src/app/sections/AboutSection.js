@@ -8,6 +8,7 @@ const images = [
   "https://images.unsplash.com/photo-1622294891694-07a7ebbd9f37?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1542296375-0558290511f8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "/total dominion church.jpg"
 ];
 export const AboutSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,9 +47,9 @@ export const AboutSection = () => {
       </div>
     </div>
 
-        <div className='flex flex-col gap-6 md:gap-10 w-full items-center justify-center md:items-start md:justify-start'>
-          <p className='font-medium text-center md:text-left text-lg lg:text-xl'>Affecting Lives to Affect Our Generation</p>
-          <p className='text-sm text-center md:text-left lg:text-base'>At Total Dominion International Church, we are driven by a profound mission to spread the love of Christ and empower individuals to live victoriously. Our vision is to build a global community united in faith, compassion, and purpose. Discover how our rich history shapes our commitment to serving God and transforming lives.</p>
+        <div className='flex flex-col gap-6 md:gap-0 w-full items-center justify-center md:items-start md:justify-start'>
+          <p className='font-medium mb-0 md:mb-5 text-center md:text-left text-lg lg:text-xl lg:border-b-2 border-[#D7B56D]'>Affecting Lives to Affect Our Generation</p>
+          <p className='text-sm text-center mb-0 md:mb-10 md:text-left lg:text-base'>At Total Dominion International Church, we are driven by a profound mission to spread the love of Christ and empower individuals to live victoriously. Our vision is to build a global community united in faith, compassion, and purpose. Discover how our rich history shapes our commitment to serving God and transforming lives.</p>
           <div className=''><button className='bg-[#D7B56D] bg-opacity-75 py-2 px-3 text-white font-bold text-xs rounded-sm flex items-center justify-center'>LEARN MORE <span><Image src='/right-arrow.svg' width={1000} height={1000} className='w-2 ml-3'/></span></button></div>
         </div>
       </div>
