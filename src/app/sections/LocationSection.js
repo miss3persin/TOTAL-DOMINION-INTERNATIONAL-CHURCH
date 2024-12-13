@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export const LocationSection = () => {
@@ -14,12 +15,56 @@ export const LocationSection = () => {
                 <div><button className='bg-[#D7B56D] bg-opacity-75 py-2 px-3 text-white font-bold text-xs rounded-sm flex items-center justify-center'>MAKE A PRAYER REQUEST <span><Image src='/right-arrow.svg' width={1000} height={1000} className='w-2 ml-3'/></span></button></div>
             </div>
 
-            <div className='flex flex-col gap-4'>
-                <div className='flex items-center gap-4 md:gap-8 text-sm lg:text-base'><span className='flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2'><Image src='/phone-icon.svg' width={1000} height={1000} className='w-3 mt-2'/>:</span>+234 812 345 6789</div>
-                <div className='flex items-center gap-4 md:gap-8 text-sm lg:text-base'><span className='flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2'><Image src='/fb-icon.svg' width={1000} height={1000} className='w-3 mt-2'/>:</span>TotalDominion</div>
-                <div className='flex items-center gap-4 md:gap-8 text-sm lg:text-base'><span className='flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2'><Image src='/ig-icon.svg' width={1000} height={1000} className='w-4 mt-2'/>:</span>total_dominion</div>
-                <div className='flex items-center gap-4 md:gap-8 text-[0.75rem] md:text-sm lg:text-base'><span className='flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2'><Image src='/mail-icon.svg' width={1000} height={1000} className='w-4 mt-2'/>:</span>totaldominionchurch@gmail.com</div>
-            </div>
+            <div className="flex flex-col gap-4">
+  <div className="flex items-center gap-4 md:gap-8 text-sm lg:text-base">
+    <span className="flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2">
+      <Image src="/phone-icon.svg" width={1000} height={1000} className="w-3 mt-2" />:
+    </span>
+    <Link href="tel:+2348123456789" target="_blank" rel="noopener noreferrer" className="hover:text-[#D7B56D]">
+      +234 812 345 6789
+    </Link>
+  </div>
+  <div className="flex items-center gap-4 md:gap-8 text-sm lg:text-base">
+    <span className="flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2">
+      <Image src="/fb-icon.svg" width={1000} height={1000} className="w-3 mt-2" />:
+    </span>
+    <Link
+      href="https://www.facebook.com/TotalDominion/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#D7B56D]"
+    >
+      TotalDominion
+    </Link>
+  </div>
+  <div className="flex items-center gap-4 md:gap-8 text-sm lg:text-base">
+    <span className="flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2">
+      <Image src="/ig-icon.svg" width={1000} height={1000} className="w-4 mt-2" />:
+    </span>
+    <Link
+      href="https://www.instagram.com/Total_dominion"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#D7B56D]"
+    >
+      total_dominion
+    </Link>
+  </div>
+  <div className="flex items-center gap-4 md:gap-8 text-[0.75rem] md:text-sm lg:text-base">
+    <span className="flex items-center justify-center text-[#D7B56D] text-xl font-bold gap-2">
+      <Image src="/mail-icon.svg" width={1000} height={1000} className="w-4 mt-2" />:
+    </span>
+    <Link
+      href="mailto:totaldominionchurch@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#D7B56D]"
+    >
+      totaldominionchurch@gmail.com
+    </Link>
+  </div>
+</div>
+
         </div>
 
         <div className='flex flex-col md:flex-row justify-between items-center font-medium text-xs lg:text-sm w-full text-white mt-28 md:mt-52 gap-5 md:gap-0'>
