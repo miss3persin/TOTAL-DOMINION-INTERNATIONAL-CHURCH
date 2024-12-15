@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,20 +21,26 @@ export const Navbar = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    // Apply scroll-based color change only for the homepage
+    if (pathname === "/") {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    } else {
+      // Set navbar to always scrolled style for other pages
+      setIsScrolled(true);
+    }
+  }, [pathname]);
 
   // Ensure the menu closes when resizing to larger screens
   useEffect(() => {
@@ -53,12 +60,15 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-black bg-opacity-90" : "bg-transparent"
+        isScrolled || pathname !== "/"
+          ? "bg-black bg-opacity-90"
+          : "bg-transparent"
       }`}
     >
       <div className="flex relative container items-center justify-between mx-auto px-4 md:px-8 lg:px-4 py-2">
         {/* Logo */}
         <div>
+          <Link href='/'>
           <Image
             src="/TDI-removebg-preview.png"
             width={1000}
@@ -66,6 +76,7 @@ export const Navbar = () => {
             className="w-16"
             alt="Logo"
           />
+          </Link>
         </div>
 
         {/* Hamburger Icon for Small Screens */}
@@ -112,30 +123,6 @@ export const Navbar = () => {
                 : ""
             }`}
           >
-            {/* Close Button */}
-            {isMenuOpen && (
-              <li className="w-full text-right mb-4 hidden">
-                <button
-                  className="text-white focus:outline-none"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </li>
-            )}
             {menuItems.map((item) => (
               <li
                 key={item.route}
