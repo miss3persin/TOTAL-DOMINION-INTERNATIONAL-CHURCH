@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+
+// dummy data
 const sermons = [
   {
     id: 1,
@@ -52,18 +54,18 @@ const sermons = [
 ];
 
 const topValues = {
-  0: "15px", // Position for the 4th active sermon
-  1: "67px", // Position for the 3rd active sermon
-  2: "119px", // Adjust as needed for the 2nd active sermon
-  3: "171px",  // Adjust as needed for the 1st active sermon
+  0: "15px", // for the 4th active sermon
+  1: "67px", // for the 3rd active sermon
+  2: "119px", // for the 2nd active sermon
+  3: "171px",  // for the 1st active sermon
 };
 
 export const SermonSection = () => {
-  const displayedSermons = sermons.slice(-4); // Display the last 4 sermons
-  const [activeSermon, setActiveSermon] = useState(displayedSermons[0].id); // Default to the first sermon in the list
+  const displayedSermons = sermons.slice(-4);
+  const [activeSermon, setActiveSermon] = useState(displayedSermons[0].id);
 
   const handleSermonClick = (id) => {
-    setActiveSermon(id); // Update the active sermon
+    setActiveSermon(id);
   };
 
   const activeSermonDetails = displayedSermons.find(
@@ -129,7 +131,7 @@ export const SermonSection = () => {
           </div>
         </div>
 
-        {/* Right Section */}
+
         <div className="flex flex-col items-center gap-2">
           <p className="text-xl font-bold border-b-2 border-[#D7B56D]">{activeSermonDetails.title}</p>
           <p className="text-sm font-bold flex items-center justify-center gap-3"><span className='flex items-center justify-center'><Image src='/person-icon.svg' width={1000} height={1000} className='w-3'/></span>{activeSermonDetails.preacher}</p>
@@ -139,7 +141,7 @@ export const SermonSection = () => {
           </p>
         </div>
 
-        {/* Decorative Design Assets */}
+        {/* Design Assets */}
         <div>
           <Image
             src="/design_asset.svg"

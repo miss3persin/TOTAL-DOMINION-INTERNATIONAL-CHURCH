@@ -21,7 +21,6 @@ export const Navbar = () => {
   ];
 
   useEffect(() => {
-    // Apply scroll-based color change only for the homepage
     if (pathname === "/") {
       const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -37,12 +36,10 @@ export const Navbar = () => {
         window.removeEventListener("scroll", handleScroll);
       };
     } else {
-      // Set navbar to always scrolled style for other pages
       setIsScrolled(true);
     }
   }, [pathname]);
 
-  // Ensure the menu closes when resizing to larger screens
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -132,7 +129,7 @@ export const Navbar = () => {
                     : "text-white"
                 } hover:text-[#D7B56D]`}
                 onClick={() => {
-                  setIsMenuOpen(false); // Close menu on navigation
+                  setIsMenuOpen(false);
                   router.push(item.route);
                 }}
               >
